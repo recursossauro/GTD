@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/gtd.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/templates/core.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/templates/core.htmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks/templates/tasks/create_task.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks/templates/tasks/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks/templates/tasks/task_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks/urls.py" afterDir="false" />
+    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="Create, list and delete simple tasks.">
+      <change afterPath="$PROJECT_DIR$/tasks/templates/tasks/task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/core.htmx" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core.htmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/task_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/task_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +120,30 @@
       <option name="presentableId" value="Default" />
       <updated>1729915375442</updated>
     </task>
+    <task id="LOCAL-00001" summary="Create, list and delete simple tasks.">
+      <option name="closed" value="true" />
+      <created>1730515196501</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1730515196501</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create, list and delete simple tasks." />
+    <option name="LAST_COMMIT_MESSAGE" value="Create, list and delete simple tasks." />
   </component>
 </project>
