@@ -1,0 +1,27 @@
+{% extends 'core.htmx' %}
+{% load static %}
+
+{% block title %}{{ block.super }} - Tasks{% endblock %}
+
+{% block header %} {{ block.super }} - Tasks {% endblock %}
+
+{% block nav %}
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="{% url 'tasks:index' %}">Tasks</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="{% url 'tasks:index' %}">Projects</a>
+    </li>
+{% endblock%}
+
+{% block content %}
+    <section>
+        {% include "tasks/create_task.html" %}
+    </section>
+<!--
+    <section id="task_list">
+            <header><h1>Task List</h1></header>
+            {% include "tasks/task_list.html" %}
+    </section>
+-->
+{%endblock%}

@@ -1,0 +1,26 @@
+<div id="tasks" class="table-responsive">
+    <table class="table table-hover table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th colspan="2">Title</th>
+        </tr>
+        </thead>
+        {% for item in object_list %}
+        <tbody>
+        <tr {% cycle "" "class='table-secondary'"%}>
+            <td><a href="" >{{item.title}}</a></td>
+            <td><div class="btn-group end" role="group">
+                <a href="" type="button" class="btn btn-secondary"><i class="bi bi-pencil-square"></i></a>
+                <button type="button" class="btn btn-danger"
+                       hx-trigger="click"
+                       hx-delete="{% url 'tasks:delete_task' item.pk %}"
+                       hx-target="#tasks"
+                       hx-swap="outerHTML"
+                       hx-confirm="Are you sure you wish to delete this task?"
+                ><i class="bi bi-trash3"></i></button>
+            </div></td>
+        </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</div>

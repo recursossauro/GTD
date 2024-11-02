@@ -1,0 +1,19 @@
+{% extends 'core.html' %}
+{% load static %}
+
+{% block title %}{{ block.super }} - Getting Things Done{% endblock %}
+
+{% block header %} {{ block.super }} - Getting Things Done {% endblock %}
+
+{% block content %}
+
+{%endblock%}
+
+{% block htmx_scripts %}
+    <script src="https://unpkg.com/htmx.org@1.1.0"></script>
+    <script>
+      document.body.addEventListener('htmx:configRequest', (event) => {
+        event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
+      })
+    </script>
+{% endblock %}
