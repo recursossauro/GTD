@@ -1,0 +1,61 @@
+{% extends 'core.html' %}
+{% load static %}
+
+{% block title %}{{ block.super }} - Update Task: {{object.pk}}. {{object.title}}{% endblock %}
+
+{% block header %} {{ block.super }} - Update Task{% endblock %}
+
+{% block content %}
+<h1>{{object.pk}}. {{object.title}}</h1>
+<form class="" method="post" action="{% url 'tasks:update_task' object.pk %}">
+    {% csrf_token %}
+    {% for error in form.non_field_errors %}
+      <div class="alert alert-danger">
+        {{ error }}
+      </div>
+    {% endfor %}
+    <fieldset>
+      <div class="row form-group{% if form.title.errors %} has-error {% endif %}">
+        <div class="input-group">
+            <label for="id_title" class="input-group-text">Title:</label><input type="text" class="form-control" name="title" id="id_title" placeholder="Insert a task and press <ENTER>" value="{{object.title}}">
+            {% for error in form.title.errors %}
+              <span class="help-block">{{ error }}</span>
+            {% endfor %}
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-6 form-group{% if form.dt_scheduled.errors %} has-error {% endif %}">
+            <div class="input-group">
+                <label for="id_dt_scheduled" class="input-group-text">Scheduled for</label><input type="date" class="form-control" name="dt_scheduled" id="id_dt_scheduled" value="{{object.dt_scheduled|date:'Y-m-d'|default:''}}" placeholder="Date">
+                {% for error in form.dt_scheduled.errors %}
+                  <span class="help-block">{{ error }}</span>
+                {% endfor %}
+            </div>
+          </div>
+          <div class="col-6 form-group{% if form.dt_completed.errors %} has-error {% endif %}">
+            <div class="input-group">
+                <label for="id_dt_completed" class="input-group-text">Completed on</label><input type="date" class="form-control" name="dt_completed" id="id_dt_completed" value="{{object.dt_completed|date:'Y-m-d'|default:''}}" placeholder="Date">
+                {% for error in form.dt_completed.errors %}
+                  <span class="help-block">{{ error }}</span>
+                {% endfor %}
+            </div>
+          </div>
+      </div>
+      <div class="row form-group{% if form.description.errors %} has-error {% endif %}">
+        <div class="col input-group">
+            <label class="input-group-text" for="id_description">Description</label>
+            <textarea class="form-control" placeholder="What is this task" id="id_description" name="description">{{object.description|default:''}}</textarea>
+            {% for error in form.description.errors %}
+              <span class="help-block">{{ error }}</span>
+            {% endfor %}
+        </div>
+      </div>
+      <div class="row">
+          <div class="col">
+              <button type="submit">Save</button>
+              <button type="reset">Cancel</button>
+          </div>
+      </div>
+    </fieldset>
+</form>
+{%endblock%}

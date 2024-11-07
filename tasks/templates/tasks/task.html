@@ -6,13 +6,19 @@
 {% block header %} {{ block.super }} - Task{% endblock %}
 
 {% block content %}
-    <header><h1>{{object.title}}</h1></header>
-    <div class="container">
+    <header><h1>{{object.pk}}. {{object.title}}</h1></header>
+    <article class="container">
+        <div class="row">
+            <div class="col-2"><b>Scheduled for:</b></div>
+            <div class="col-4">{{object.dt_scheduled|date:'d/m/Y'}}</div>
+            <div class="col-2"><b>Completed on:</b></div>
+            <div class="col-4">{{object.dt_completed|date:'d/m/Y'|default:'No'}}</div>
+        </div>
         <div class="row">
             <div class="col-12"><b>Description:</b></div>
         </div>
         <div class="row">
             <div class="col-12">{{object.description|default:''}}</div>
         </div>
-    </div>
+    </article>
 {%endblock%}
