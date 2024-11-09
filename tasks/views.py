@@ -27,7 +27,7 @@ class TaskUpdateView(LoginRequiredMixin, UpdateView):
     fields = ['title', 'description', 'dt_scheduled', 'dt_completed']
 
     def get_success_url(self):
-        #print(self.request.GET.get('next', reverse_lazy('tasks:task', kwargs={'pk': self.object.pk})))
+        #   print(self.request.GET.get('next', reverse_lazy('tasks:task', kwargs={'pk': self.object.pk})))
         return self.request.GET.get('next', reverse_lazy('tasks:task', kwargs={'pk': self.object.pk}))
 
 def display_tasks(request):
@@ -70,4 +70,4 @@ def conclude_or_not_task(request, pk):
             task.save()
             result = 'Changed'
 
-    return HttpResponseRedirect(reverse("tasks/display_tasks"))
+    return HttpResponseRedirect(reverse("tasks:display_tasks"))
