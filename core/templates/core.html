@@ -31,7 +31,7 @@
                 {% endblock %}
                 {% if user.is_authenticated %}
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">logoff</a>
+                        <form action="{% url 'logout' %}" method="post">{% csrf_token %}<button type="submit" class="nav-link active btn btn-link" aria-current="page">Log Out</button></form>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="#">{{ user.username }}</a>
