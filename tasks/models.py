@@ -1,5 +1,3 @@
-from os import MFD_ALLOW_SEALING
-
 from django.db import models
 from django.utils.timezone import now
 from datetime import timedelta
@@ -41,7 +39,13 @@ class Task(models.Model):
         return self.title
 
 class TaskControl(models.Model):
+    TYPE_CHOICES = {
+        'HS':'Historic',
+        'SC':'Schedule'
+    }
+
     task        = models.ForeignKey(Task, on_delete=models.CASCADE)
+    type        = models.CharField('Type', max_length=2, choices=TYPE_CHOICES, default='HS')
     dt          = models.DateTimeField('Date', default=now())
     description = models.TextField("description")
     # Fields to backup control
