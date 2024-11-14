@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="Corrected in tasks.views conclude_or_not_task(request, pk) on line 73, url string bad formation.">
+    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="Implement button to logout: include logout path on gtd.urls.py; Change link logoff to botton Log Out in core.html;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/core.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gtd/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/gtd/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gtd/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/gtd/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731117970501</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Implement button to logout: include logout path on gtd.urls.py; Change link logoff to botton Log Out in core.html;">
+      <option name="closed" value="true" />
+      <created>1731500046840</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731500046840</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,6 +235,7 @@
     <MESSAGE value="Created description field on models.Task; Create a display task and create model TaskHistory." />
     <MESSAGE value="Create README.md" />
     <MESSAGE value="Corrected in tasks.views conclude_or_not_task(request, pk) on line 73, url string bad formation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected in tasks.views conclude_or_not_task(request, pk) on line 73, url string bad formation." />
+    <MESSAGE value="Implement button to logout: include logout path on gtd.urls.py; Change link logoff to botton Log Out in core.html;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement button to logout: include logout path on gtd.urls.py; Change link logoff to botton Log Out in core.html;" />
   </component>
 </project>

@@ -1,3 +1,5 @@
+from os import MFD_ALLOW_SEALING
+
 from django.db import models
 from django.utils.timezone import now
 from datetime import timedelta
@@ -23,6 +25,17 @@ class Task(models.Model):
         verbose_name = 'Task'
         verbose_name_plural = 'Tasks'
         ordering = ['dt_completed','dt_scheduled']
+
+    def save(self, *args, **kwargs):
+        sqlInsert = True
+        if self.pk:
+            sqlInsert = False
+
+        super(Task, self).save(*args, **kwargs)
+
+        if sqlInsert:
+            TaskControl(task=self, description='Task Created').save()
+
 
     def __str__(self):
         return self.title
