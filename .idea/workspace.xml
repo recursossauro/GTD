@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="A TaskControl is created for a new task saved by Task.save() method.">
+    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="On class TaskControl added TYPE_CHOICES and CharField type.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/create_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/create_task.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731617403285</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="On class TaskControl added TYPE_CHOICES and CharField type.">
+      <option name="closed" value="true" />
+      <created>1731618638179</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731618638179</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,6 +260,7 @@
     <MESSAGE value="Corrected in tasks.views conclude_or_not_task(request, pk) on line 73, url string bad formation." />
     <MESSAGE value="Implement button to logout: include logout path on gtd.urls.py; Change link logoff to botton Log Out in core.html;" />
     <MESSAGE value="A TaskControl is created for a new task saved by Task.save() method." />
-    <option name="LAST_COMMIT_MESSAGE" value="A TaskControl is created for a new task saved by Task.save() method." />
+    <MESSAGE value="On class TaskControl added TYPE_CHOICES and CharField type." />
+    <option name="LAST_COMMIT_MESSAGE" value="On class TaskControl added TYPE_CHOICES and CharField type." />
   </component>
 </project>

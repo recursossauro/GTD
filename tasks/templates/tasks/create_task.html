@@ -13,7 +13,7 @@
     <fieldset>
       <div class="row form-group{% if form.title.errors %} has-error {% endif %}">
         <div class="input-group">
-            <label for="id_title" class="input-group-text">New Task</label><input type="text" class="form-control" name="title" id="id_title" placeholder="Insert a task and press <ENTER>">
+            <label for="id_title" class="input-group-text">New Task</label><input type="text" class="form-control" name="title" id="id_title" placeholder="Write a task and press <ENTER>">
             {% for error in form.title.errors %}
               <span class="help-block">{{ error }}</span>
             {% endfor %}
