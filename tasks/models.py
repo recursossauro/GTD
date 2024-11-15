@@ -50,6 +50,7 @@ class TaskControl(models.Model):
     type        = models.CharField('Type', max_length=2, choices=TYPE_CHOICES, default='HS')
     dt          = models.DateTimeField('Date', default=now())
     description = models.TextField("description")
+
     # Fields to backup control
     created = models.DateTimeField('Created', auto_now_add=True, null=True)
     modified = models.DateTimeField('Modified', auto_now=True, null=True)
