@@ -34,6 +34,8 @@ class Task(models.Model):
         if sqlInsert:
             TaskControl(task=self, description='Task Created').save()
 
+    def getHistory(self):
+        return self.taskcontrol_set.filter(type='HS').order_by('-dt')
 
     def __str__(self):
         return self.title

@@ -18,7 +18,7 @@
                 </td>
             </form>
         </tr>
-        {% for item in object.taskcontrol_set.all %}
+        {% for item in object.getHistory %}
             <tr {% cycle "" "class='table-secondary'" %}>
                 <td>
                     {{item.dt|date:'d/m/Y H:i'}}

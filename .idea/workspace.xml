@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="DB changes">
+    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="conclude_or_not_task deleted result variable.&#10;Create History implementation:&#10;  tasks.views added def create_history(request, task_id)&#10;  tasks.urls: added # TASK HISTORY&#10;    path('task_history/&lt;int:task_id&gt;/new/', create_history, name='new_task_history'),">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/history_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/history_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +29,9 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -221,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731633269133</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="conclude_or_not_task deleted result variable.&#10;Create History implementation:&#10;  tasks.views added def create_history(request, task_id)&#10;  tasks.urls: added # TASK HISTORY&#10;    path('task_history/&lt;int:task_id&gt;/new/', create_history, name='new_task_history'),">
+      <option name="closed" value="true" />
+      <created>1731636878884</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731636878884</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -296,6 +305,7 @@
     <MESSAGE value="create_task.html: changed placeholder=&quot;Insert a task and press &lt;ENTER&gt;&quot; to &quot;Write a task and press &lt;ENTER&gt;&quot;" />
     <MESSAGE value="Created history_list.html, changed TYPE_CHOICES 'HS':'Historic' to 'HS':'History'" />
     <MESSAGE value="DB changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="DB changes" />
+    <MESSAGE value="conclude_or_not_task deleted result variable.&#10;Create History implementation:&#10;  tasks.views added def create_history(request, task_id)&#10;  tasks.urls: added # TASK HISTORY&#10;    path('task_history/&lt;int:task_id&gt;/new/', create_history, name='new_task_history')," />
+    <option name="LAST_COMMIT_MESSAGE" value="conclude_or_not_task deleted result variable.&#10;Create History implementation:&#10;  tasks.views added def create_history(request, task_id)&#10;  tasks.urls: added # TASK HISTORY&#10;    path('task_history/&lt;int:task_id&gt;/new/', create_history, name='new_task_history')," />
   </component>
 </project>
