@@ -7,7 +7,8 @@ from django.urls import reverse_lazy, reverse
 from django.utils.timezone import now
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 
-from .models import Task
+from .models import Task, TaskControl
+
 
 class TaskCreateView(LoginRequiredMixin, CreateView):
     template_name = 'tasks/create_task.html'
@@ -30,6 +31,7 @@ class TaskUpdateView(LoginRequiredMixin, UpdateView):
         #   print(self.request.GET.get('next', reverse_lazy('tasks:task', kwargs={'pk': self.object.pk})))
         return self.request.GET.get('next', reverse_lazy('tasks:task', kwargs={'pk': self.object.pk}))
 
+@login_required
 def display_tasks(request):
     tasks = Task.objects.all()
     return render(request, 'tasks/task_list.html', {'object_list': tasks})
@@ -56,18 +58,29 @@ def conclude_or_not_task(request, pk):
     #     Verificar se existe POST['checkbox']
     #     Se não houver subir o erro: campo 'checkbox' não foi enviado.
 
-    result = ''
     task = get_object_or_404(Task, pk=pk)
     if ('checkbox' in request.POST):
         if request.POST['checkbox'] == 'checked':
             if task.dt_completed is None:
                 task.dt_completed = now()
                 task.save()
-                result = 'Changed'
     else:
         if task.dt_completed:
             task.dt_completed = None
             task.save()
-            result = 'Changed'
 
     return HttpResponseRedirect(reverse("tasks:display_tasks"))
+
+@login_required
+def create_history(request, task_id):
+    task = get_object_or_404(Task, id=task_id)
+    date = request.POST.get('dt')
+    if 'time' in request.POST:
+        date = date + ' ' + request.POST.get('time')
+
+    if date is None or date== '':
+        date = now()
+
+    TaskControl(task=task, type='HS', dt=date, description=request.POST.get('description')).save()
+
+    return HttpResponseRedirect(reverse("tasks:task", kwargs={'pk': task_id}))

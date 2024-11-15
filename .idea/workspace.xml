@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="create_task.html: changed placeholder=&quot;Insert a task and press &lt;ENTER&gt;&quot; to &quot;Write a task and press &lt;ENTER&gt;&quot;">
-      <change afterPath="$PROJECT_DIR$/tasks/templates/tasks/history_list.html" afterDir="false" />
+    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="DB changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/history_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/history_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +25,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Leonardo Düchting de Abreu e Lima &lt;recursossauro@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -200,7 +205,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731623340275</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Created history_list.html, changed TYPE_CHOICES 'HS':'Historic' to 'HS':'History'">
+      <option name="closed" value="true" />
+      <created>1731633075226</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731633075226</updated>
+    </task>
+    <task id="LOCAL-00012" summary="DB changes">
+      <option name="closed" value="true" />
+      <created>1731633269133</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1731633269133</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -273,6 +294,8 @@
     <MESSAGE value="A TaskControl is created for a new task saved by Task.save() method." />
     <MESSAGE value="On class TaskControl added TYPE_CHOICES and CharField type." />
     <MESSAGE value="create_task.html: changed placeholder=&quot;Insert a task and press &lt;ENTER&gt;&quot; to &quot;Write a task and press &lt;ENTER&gt;&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="create_task.html: changed placeholder=&quot;Insert a task and press &lt;ENTER&gt;&quot; to &quot;Write a task and press &lt;ENTER&gt;&quot;" />
+    <MESSAGE value="Created history_list.html, changed TYPE_CHOICES 'HS':'Historic' to 'HS':'History'" />
+    <MESSAGE value="DB changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="DB changes" />
   </component>
 </project>

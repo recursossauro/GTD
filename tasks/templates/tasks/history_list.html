@@ -9,7 +9,7 @@
         </thead>
         <tbody>
         <tr>
-            <form action="" method="post">
+            <form action="{% url 'tasks:new_task_history' object.pk %}" method="post">
                 {% csrf_token %}
                 <td><input type="date" name="dt" id="id_dt"><input type="time" name="time" id="id_time"></td>
                 <td><textarea name="description" id="id_description" cols="60" rows="3"></textarea></td>
