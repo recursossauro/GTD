@@ -28,4 +28,7 @@
             <a type="button" class="btn btn-danger" href="{% url 'tasks:delete_task' object.pk %}"><i class="bi bi-trash3"></i></a>
         </div>
     </aside>
+    <section>
+        {% include 'tasks/history_list.html' %}
+    </section>
 {%endblock%}

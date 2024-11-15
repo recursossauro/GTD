@@ -1,0 +1,43 @@
+<div id="histories" class="table-responsive">
+    <table class="table table-hover table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th scope="col" class="th-sm">Date</th>
+            <th scope="col" class="th-lg">Fate</th>
+            <th scope="col" class="th-sm"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <form action="" method="post">
+                {% csrf_token %}
+                <td><input type="date" name="dt" id="id_dt"><input type="time" name="time" id="id_time"></td>
+                <td><textarea name="description" id="id_description" cols="60" rows="3"></textarea></td>
+                <td>
+                    <button type="submit" class="btn btn-success"><i class="bi bi-file-earmark-plus"></i></button>
+                </td>
+            </form>
+        </tr>
+        {% for item in object.taskcontrol_set.all %}
+            <tr {% cycle "" "class='table-secondary'" %}>
+                <td>
+                    {{item.dt|date:'d/m/Y H:i'}}
+                </td>
+                <td>
+                    {{item.description}}
+                </td>
+                <td>
+                    <div class="btn-group end" role="group">
+                        <a type="button" class="btn btn-secondary" href="?next={{ request.path|urlencode }}"><i class="bi bi-pencil-square"></i></a>
+                        <button type="button" class="btn btn-danger"
+                               hx-delete=""
+                               hx-confirm="Are you sure you wish to delete this task?"
+                               hx-target="#tasks"
+                        ><i class="bi bi-trash3"></i></button>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>

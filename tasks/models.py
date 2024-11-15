@@ -40,8 +40,8 @@ class Task(models.Model):
 
 class TaskControl(models.Model):
     TYPE_CHOICES = {
-        'HS':'Historic',
-        'SC':'Schedule'
+        'HS':'History',
+        'SC':'Schedule',
     }
 
     task        = models.ForeignKey(Task, on_delete=models.CASCADE)

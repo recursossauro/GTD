@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="On class TaskControl added TYPE_CHOICES and CharField type.">
+    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="create_task.html: changed placeholder=&quot;Insert a task and press &lt;ENTER&gt;&quot; to &quot;Write a task and press &lt;ENTER&gt;&quot;">
+      <change afterPath="$PROJECT_DIR$/tasks/templates/tasks/history_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/create_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/create_task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/task.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731618638179</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="create_task.html: changed placeholder=&quot;Insert a task and press &lt;ENTER&gt;&quot; to &quot;Write a task and press &lt;ENTER&gt;&quot;">
+      <option name="closed" value="true" />
+      <created>1731623340275</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731623340275</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -261,6 +272,7 @@
     <MESSAGE value="Implement button to logout: include logout path on gtd.urls.py; Change link logoff to botton Log Out in core.html;" />
     <MESSAGE value="A TaskControl is created for a new task saved by Task.save() method." />
     <MESSAGE value="On class TaskControl added TYPE_CHOICES and CharField type." />
-    <option name="LAST_COMMIT_MESSAGE" value="On class TaskControl added TYPE_CHOICES and CharField type." />
+    <MESSAGE value="create_task.html: changed placeholder=&quot;Insert a task and press &lt;ENTER&gt;&quot; to &quot;Write a task and press &lt;ENTER&gt;&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="create_task.html: changed placeholder=&quot;Insert a task and press &lt;ENTER&gt;&quot; to &quot;Write a task and press &lt;ENTER&gt;&quot;" />
   </component>
 </project>
