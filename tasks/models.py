@@ -1,4 +1,5 @@
 from django.db import models
+from django.shortcuts import get_object_or_404
 from django.utils.timezone import now
 from datetime import timedelta
 
@@ -26,13 +27,29 @@ class Task(models.Model):
 
     def save(self, *args, **kwargs):
 
+        # Do tests to create history about:
+        #   Task Created
+        #   Task Completed
+        #   Changed date completed.
+
+
         if not self.pk:
+            # Prepare create history for Task Created
             taskControl = TaskControl(task=self, description='Task Created')
+        elif self.dt_completed:
+            originalTask = get_object_or_404(Task, pk = self.pk)
+            if originalTask.dt_completed:
+                if originalTask.dt_completed != self.dt_completed:
+                    taskControl = TaskControl(task=self, description='Task completed date was changed.')
+            else:
+                taskControl = TaskControl(task=self, description='Task completed.')
 
         super(Task, self).save(*args, **kwargs)
 
-        if taskControl:
+        try:
             taskControl.save()
+        except NameError:
+            pass
 
     def getHistory(self):
         return self.taskcontrol_set.filter(type='HS').order_by('-dt')
