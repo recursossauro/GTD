@@ -75,12 +75,14 @@ def conclude_or_not_task(request, pk):
 def create_history(request, task_id):
     task = get_object_or_404(Task, id=task_id)
     date = request.POST.get('dt')
-    if 'time' in request.POST:
-        date = date + ' ' + request.POST.get('time')
 
     if date is None or date== '':
-        date = now()
+        TaskControl(task=task, type='HS', description=request.POST.get('description')).save()
+    else:
+        if 'time' in request.POST and request.POST.get('time'):
+            date = date + ' ' + request.POST.get('time')
 
-    TaskControl(task=task, type='HS', dt=date, description=request.POST.get('description')).save()
+        TaskControl(task=task, type='HS', dt=date, description=request.POST.get('description')).save()
+
 
     return HttpResponseRedirect(reverse("tasks:task", kwargs={'pk': task_id}))
