@@ -6,7 +6,7 @@ defautlSchedule = now() + timedelta(days=7)
 
 
 class Task(models.Model):
-    # A Task cold be a task, a stuff or a project
+    # A Task could be a task, a stuff or a project.
 
     title = models.CharField("Title", max_length=160)
     description = models.TextField("description", blank=True, null=True)
@@ -25,14 +25,14 @@ class Task(models.Model):
         ordering = ['dt_completed','dt_scheduled']
 
     def save(self, *args, **kwargs):
-        sqlInsert = True
-        if self.pk:
-            sqlInsert = False
+
+        if not self.pk:
+            taskControl = TaskControl(task=self, description='Task Created')
 
         super(Task, self).save(*args, **kwargs)
 
-        if sqlInsert:
-            TaskControl(task=self, description='Task Created').save()
+        if taskControl:
+            taskControl.save()
 
     def getHistory(self):
         return self.taskcontrol_set.filter(type='HS').order_by('-dt')

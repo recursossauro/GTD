@@ -11,8 +11,8 @@
         <tr>
             <form action="{% url 'tasks:new_task_history' object.pk %}" method="post">
                 {% csrf_token %}
-                <td><input type="date" name="dt" id="id_dt"><input type="time" name="time" id="id_time"></td>
-                <td><textarea name="description" id="id_description" cols="60" rows="3"></textarea></td>
+                <td class="input-group"><input type="date" name="dt" id="id_dt" class="form-control" style="width:55%;"><input type="time" name="time" id="id_time" class="form-control"></td>
+                <td><textarea name="description" id="id_description" class="form-control" cols="60" rows="3"></textarea></td>
                 <td>
                     <button type="submit" class="btn btn-success"><i class="bi bi-file-earmark-plus"></i></button>
                 </td>

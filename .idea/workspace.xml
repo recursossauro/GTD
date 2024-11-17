@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="conclude_or_not_task deleted result variable.&#10;Create History implementation:&#10;  tasks.views added def create_history(request, task_id)&#10;  tasks.urls: added # TASK HISTORY&#10;    path('task_history/&lt;int:task_id&gt;/new/', create_history, name='new_task_history'),">
-      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/core.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gtd/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/gtd/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/history_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/history_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
