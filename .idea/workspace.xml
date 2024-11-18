@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="Corrected error to save History with date or time null on tasks.views.create_history.">
+    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="settings.pu&#10;Changed TIME_ZONE to 'America/Sao_Paulo';&#10;Added USE_L10N = True;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -254,7 +256,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731887930061</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Changed task = get_object_or_404(Task, id=task_id) to task = Task(id=task_id) on tasks.views.create_history.">
+      <option name="closed" value="true" />
+      <created>1731888862927</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1731888862927</updated>
+    </task>
+    <task id="LOCAL-00018" summary="settings.pu&#10;Changed TIME_ZONE to 'America/Sao_Paulo';&#10;Added USE_L10N = True;">
+      <option name="closed" value="true" />
+      <created>1731890426331</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1731890426331</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -333,6 +351,8 @@
     <MESSAGE value="Changed a little the code  for more readabilty and simplicity models.Task.save()" />
     <MESSAGE value="Implements insert history when task is completed on tasks.models.Task.save()" />
     <MESSAGE value="Corrected error to save History with date or time null on tasks.views.create_history." />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected error to save History with date or time null on tasks.views.create_history." />
+    <MESSAGE value="Changed task = get_object_or_404(Task, id=task_id) to task = Task(id=task_id) on tasks.views.create_history." />
+    <MESSAGE value="settings.pu&#10;Changed TIME_ZONE to 'America/Sao_Paulo';&#10;Added USE_L10N = True;" />
+    <option name="LAST_COMMIT_MESSAGE" value="settings.pu&#10;Changed TIME_ZONE to 'America/Sao_Paulo';&#10;Added USE_L10N = True;" />
   </component>
 </project>

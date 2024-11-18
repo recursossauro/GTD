@@ -52,6 +52,20 @@ def delete_task(request, id):
     return render(request, 'tasks/task_list.html', {'object_list': tasks})
 
 @login_required
+def task_conclude(request, pk):
+
+    task = get_object_or_404(Task, pk=pk)
+
+    if task.dt_completed is None:
+        task.dt_completed = now()
+        task.save()
+
+    if request.GET.get('next') is not None:
+        return HttpResponseRedirect(request.GET.get('next'))
+
+    return HttpResponseRedirect(reverse('tasks:task', kwargs={'pk':pk}))
+
+@login_required
 def conclude_or_not_task(request, pk):
 
     # IMPLEMENTAÇÕES FUTURAS:
