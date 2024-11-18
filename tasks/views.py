@@ -73,7 +73,9 @@ def conclude_or_not_task(request, pk):
 
 @login_required
 def create_history(request, task_id):
-    task = get_object_or_404(Task, id=task_id)
+
+    task = Task(id=task_id)
+
     date = request.POST.get('dt')
 
     if date is None or date== '':

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="Implements insert history when task is completed on tasks.models.Task.save()">
+    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="Corrected error to save History with date or time null on tasks.views.create_history.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/views.py" afterDir="false" />
@@ -246,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731886368131</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Corrected error to save History with date or time null on tasks.views.create_history.">
+      <option name="closed" value="true" />
+      <created>1731887930061</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1731887930061</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -324,6 +332,7 @@
     <MESSAGE value="conclude_or_not_task deleted result variable.&#10;Create History implementation:&#10;  tasks.views added def create_history(request, task_id)&#10;  tasks.urls: added # TASK HISTORY&#10;    path('task_history/&lt;int:task_id&gt;/new/', create_history, name='new_task_history')," />
     <MESSAGE value="Changed a little the code  for more readabilty and simplicity models.Task.save()" />
     <MESSAGE value="Implements insert history when task is completed on tasks.models.Task.save()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implements insert history when task is completed on tasks.models.Task.save()" />
+    <MESSAGE value="Corrected error to save History with date or time null on tasks.views.create_history." />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected error to save History with date or time null on tasks.views.create_history." />
   </component>
 </project>
