@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="settings.pu&#10;Changed TIME_ZONE to 'America/Sao_Paulo';&#10;Added USE_L10N = True;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/create_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/create_task.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/task_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/task_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="Implemented two lists of tasks: uncompleted and completed.&#10;Changed delete_task to redirect to tasks:display_tasks after delete." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -273,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731890426331</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Implemented two lists of tasks: uncompleted and completed.&#10;Changed delete_task to redirect to tasks:display_tasks after delete.">
+      <option name="closed" value="true" />
+      <created>1732061350365</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732061350365</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -354,6 +355,7 @@
     <MESSAGE value="Corrected error to save History with date or time null on tasks.views.create_history." />
     <MESSAGE value="Changed task = get_object_or_404(Task, id=task_id) to task = Task(id=task_id) on tasks.views.create_history." />
     <MESSAGE value="settings.pu&#10;Changed TIME_ZONE to 'America/Sao_Paulo';&#10;Added USE_L10N = True;" />
-    <option name="LAST_COMMIT_MESSAGE" value="settings.pu&#10;Changed TIME_ZONE to 'America/Sao_Paulo';&#10;Added USE_L10N = True;" />
+    <MESSAGE value="Implemented two lists of tasks: uncompleted and completed.&#10;Changed delete_task to redirect to tasks:display_tasks after delete." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented two lists of tasks: uncompleted and completed.&#10;Changed delete_task to redirect to tasks:display_tasks after delete." />
   </component>
 </project>
