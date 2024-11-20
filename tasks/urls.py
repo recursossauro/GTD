@@ -11,6 +11,7 @@ from tasks.views import (
     task_conclude,
 )
 
+
 urlpatterns = [
 # TASK
     path('', TaskListView.as_view(), name='index'),

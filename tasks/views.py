@@ -15,13 +15,13 @@ class TaskCreateView(LoginRequiredMixin, CreateView):
     model = Task
     fields = ['title']
     success_url = reverse_lazy('tasks:create_task')
-
+"""
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['object_list'] = Task.objects.all()
 
         return context
-
+"""
 class TaskUpdateView(LoginRequiredMixin, UpdateView):
     template_name = 'tasks/update_task.html'
     model = Task
@@ -33,8 +33,15 @@ class TaskUpdateView(LoginRequiredMixin, UpdateView):
 
 @login_required
 def display_tasks(request):
-    tasks = Task.objects.all()
-    return render(request, 'tasks/task_list.html', {'object_list': tasks})
+
+    context = {
+        'tasks': {
+            'uncompleted_tasks': Task.objects.filter(dt_completed__isnull=True),
+            'completed_tasks': Task.objects.filter(dt_completed__isnull=False),
+        }
+    }
+
+    return render(request, 'tasks/task_list.html', context)
 
 class TaskDetailView(LoginRequiredMixin, DetailView):
     template_name = "tasks/task.html"
@@ -49,7 +56,7 @@ class TaskListView(LoginRequiredMixin, ListView):
 def delete_task(request, id):
     Task.objects.filter(id=id).delete()
     tasks = Task.objects.all()
-    return render(request, 'tasks/task_list.html', {'object_list': tasks})
+    return HttpResponseRedirect(reverse("tasks:display_tasks"))
 
 @login_required
 def task_conclude(request, pk):

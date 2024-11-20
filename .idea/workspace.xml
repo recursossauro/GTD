@@ -7,7 +7,8 @@
     <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="settings.pu&#10;Changed TIME_ZONE to 'America/Sao_Paulo';&#10;Added USE_L10N = True;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/create_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/create_task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/task_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/task_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/views.py" afterDir="false" />
     </list>
