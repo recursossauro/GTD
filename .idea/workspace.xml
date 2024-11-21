@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="created an Empty Dockerfile">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="Add a col size on tag &lt;textarea&gt; to duplicate the vertical size of field description in tasks/update_task.html">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +29,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "recursossauro"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:recursossauro/GTD.git",
+    "accountId": "c368a721-149d-43c2-94b2-a0978b46e706"
+  }
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -294,7 +305,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732067913725</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Add a col size on tag &lt;textarea&gt; to duplicate the vertical size of field description in tasks/update_task.html">
+      <option name="closed" value="true" />
+      <created>1732151882157</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1732151882157</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -378,6 +397,7 @@
     <MESSAGE value="Implemented two lists of tasks: uncompleted and completed.&#10;Changed delete_task to redirect to tasks:display_tasks after delete." />
     <MESSAGE value="created requirements.txt" />
     <MESSAGE value="created an Empty Dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="created an Empty Dockerfile" />
+    <MESSAGE value="Add a col size on tag &lt;textarea&gt; to duplicate the vertical size of field description in tasks/update_task.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a col size on tag &lt;textarea&gt; to duplicate the vertical size of field description in tasks/update_task.html" />
   </component>
 </project>
