@@ -44,7 +44,7 @@
       <div class="row form-group{% if form.description.errors %} has-error {% endif %}">
         <div class="col input-group">
             <label class="input-group-text" for="id_description">Description</label>
-            <textarea class="form-control" placeholder="What is this task" id="id_description" name="description">{{object.description|default:''}}</textarea>
+            <textarea class="form-control" placeholder="What is this task" id="id_description" name="description" rows="8">{{object.description|default:''}}</textarea>
             {% for error in form.description.errors %}
               <span class="help-block">{{ error }}</span>
             {% endfor %}
