@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="Implemented delete task histrory.">
+    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="Add icon home &quot;&lt;i class=&quot;bi bi-house&quot;&gt;&lt;/i&gt;&quot; on home menu in core.html.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/templates/core.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,7 +323,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732326162032</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Add icon home &quot;&lt;i class=&quot;bi bi-house&quot;&gt;&lt;/i&gt;&quot; on home menu in core.html.">
+      <option name="closed" value="true" />
+      <created>1732326492986</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1732326492986</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -407,6 +417,7 @@
     <MESSAGE value="created an Empty Dockerfile" />
     <MESSAGE value="Add a col size on tag &lt;textarea&gt; to duplicate the vertical size of field description in tasks/update_task.html" />
     <MESSAGE value="Implemented delete task histrory." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented delete task histrory." />
+    <MESSAGE value="Add icon home &quot;&lt;i class=&quot;bi bi-house&quot;&gt;&lt;/i&gt;&quot; on home menu in core.html." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add icon home &quot;&lt;i class=&quot;bi bi-house&quot;&gt;&lt;/i&gt;&quot; on home menu in core.html." />
   </component>
 </project>

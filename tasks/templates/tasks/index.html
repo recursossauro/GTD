@@ -6,12 +6,7 @@
 {% block header %} {{ block.super }} - Tasks {% endblock %}
 
 {% block nav %}
-    <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="{% url 'tasks:index' %}">Tasks</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="{% url 'tasks:index' %}">Projects</a>
-    </li>
+    {{ block.super }}
 {% endblock%}
 
 {% block content %}
