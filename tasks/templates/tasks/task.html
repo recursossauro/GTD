@@ -1,4 +1,4 @@
-{% extends 'core.html' %}
+{% extends 'core.htmx' %}
 {% load static %}
 
 {% block title %}{{ block.super }} - Task: {{object.title}}{% endblock %}
@@ -31,7 +31,12 @@
             <a type="button" class="btn btn-danger" href="{% url 'tasks:delete_task' object.pk %}"><i class="bi bi-trash3"></i></a>
         </div>
     </aside>
-    <section>
+    <section
+        hx-trigger="load"
+        hx-target="this"
+        hx-swap="innerHTML"
+        hx-get="{% url 'tasks:display_task_history' object.id %}"
+    >
         {% include 'tasks/history_list.html' %}
     </section>
 {%endblock%}

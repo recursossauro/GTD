@@ -92,6 +92,8 @@ def conclude_or_not_task(request, pk):
 
     return HttpResponseRedirect(reverse("tasks:display_tasks"))
 
+# HISTORY
+
 @login_required
 def create_history(request, task_id):
 
@@ -109,3 +111,19 @@ def create_history(request, task_id):
 
 
     return HttpResponseRedirect(reverse("tasks:task", kwargs={'pk': task_id}))
+
+@login_required
+def display_task_history(request, task_id):
+
+    context = {
+        'object':Task(id=task_id),
+        'histories': TaskControl.objects.filter(task_id = task_id, type='HS').order_by('-dt')
+    }
+
+    return render(request, 'tasks/history_list.html', context)
+
+@login_required
+@require_http_methods(['DELETE'])
+def delete_TaskControl(request, task_id, id):
+    TaskControl.objects.filter(id=id).delete()
+    return HttpResponseRedirect(reverse("tasks:display_task_history", kwargs={"task_id": task_id}))

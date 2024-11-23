@@ -7,8 +7,10 @@ from tasks.views import (
     TaskUpdateView,
     TaskDetailView,
     conclude_or_not_task,
-    create_history,
     task_conclude,
+    create_history,
+    delete_TaskControl,
+    display_task_history,
 )
 
 
@@ -24,4 +26,6 @@ urlpatterns = [
     path('task/<int:id>/delete/', delete_task, name='delete_task'),
 # TASK HISTORY
     path('task_history/<int:task_id>/new/', create_history, name='new_task_history'),
+    path('display_task_history/<int:task_id>/', display_task_history, name='display_task_history'),
+    path('task_control/<int:task_id>/<int:id>/delete/', delete_TaskControl, name='delete_task_control'),
 ]
