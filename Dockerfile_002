@@ -1,0 +1,33 @@
+# Utiliza a imagem oficial do Python 3 como base
+FROM python:3.11-slim-buster
+
+# Instalar o SQLite 3
+RUN apt-get update
+RUN apt-get install -y sqlite3
+
+# Define o diretório de trabalho dentro do container
+WORKDIR /app
+
+# Copia o arquivo requirements.txt para o container
+COPY requirements.txt requirements.txt
+
+# Instala as dependências do projeto
+RUN pip install -r requirements.txt
+
+# Copia o código da aplicação para o container
+# Copy app
+COPY auth /app/auth
+COPY core /app/core
+COPY gtd /app/gtd
+COPY tasks /app/tasks
+COPY templates /app/templates
+COPY manage.py /app
+COPY requirements.txt /app
+# Nos próximos, essa linha deve estar comentada e ter makemigrations e migrate para gerar o bd
+COPY db.sqlite3 /app
+
+# Define a porta que a aplicação irá escutar
+EXPOSE 8000
+
+# Comando para executar a aplicação
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
