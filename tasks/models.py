@@ -2,12 +2,14 @@ from django.db import models
 from django.shortcuts import get_object_or_404
 from django.utils.timezone import now
 from datetime import timedelta
+from django.conf import settings
 
 defautlSchedule = now() + timedelta(days=7)
 
-
 class Task(models.Model):
     # A Task could be a task, a stuff or a project.
+
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='User', on_delete=models.CASCADE)
 
     title = models.CharField("Title", max_length=160)
     description = models.TextField("description", blank=True, null=True)
@@ -35,14 +37,14 @@ class Task(models.Model):
 
         if not self.pk:
             # Prepare create history for Task Created
-            taskControl = TaskControl(task=self, description='Task Created')
+            taskControl = TaskControl(task=self, user=self.user, description='Task Created')
         elif self.dt_completed:
             originalTask = get_object_or_404(Task, pk = self.pk)
             if originalTask.dt_completed:
                 if originalTask.dt_completed != self.dt_completed:
-                    taskControl = TaskControl(task=self, description='Task completed date was changed.')
+                    taskControl = TaskControl(task=self, user=self.user, description='Task completed date was changed.')
             else:
-                taskControl = TaskControl(task=self, description='Task completed.')
+                taskControl = TaskControl(task=self, user=self.user, description='Task completed.')
 
         super(Task, self).save(*args, **kwargs)
 
@@ -57,11 +59,15 @@ class Task(models.Model):
     def __str__(self):
         return self.title
 
+
 class TaskControl(models.Model):
     TYPE_CHOICES = {
         'HS':'History',
         'SC':'Schedule',
     }
+
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='User', on_delete=models.CASCADE, blank=True,
+                             null=True)
 
     task        = models.ForeignKey(Task, on_delete=models.CASCADE)
     type        = models.CharField('Type', max_length=2, choices=TYPE_CHOICES, default='HS')
