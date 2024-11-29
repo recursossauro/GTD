@@ -40,18 +40,24 @@ class Task(models.Model):
         #   Task Created
         #   Task Completed
         #   Changed date completed.
+        #   Task turned uncompleted.
 
 
         if not self.pk:
             # Prepare create history for Task Created
             taskControl = TaskControl(task=self, user=self.user, description='Task Created')
-        elif self.dt_completed:
-            originalTask = get_object_or_404(Task, pk = self.pk)
-            if originalTask.dt_completed:
-                if originalTask.dt_completed != self.dt_completed:
-                    taskControl = TaskControl(task=self, user=self.user, description='Task completed date was changed.')
+        else:
+            originalTask = get_object_or_404(Task, pk=self.pk)
+            if self.dt_completed:
+                if originalTask.dt_completed:
+                    if originalTask.dt_completed != self.dt_completed:
+                        taskControl = TaskControl(task=self, user=self.user, description='Task completed date was changed.')
+                else:
+                    taskControl = TaskControl(task=self, user=self.user, description='Task completed.')
             else:
-                taskControl = TaskControl(task=self, user=self.user, description='Task completed.')
+                if originalTask.dt_completed:
+                    taskControl = TaskControl(task=self, user=self.user, description='Task returned uncompleted.')
+
 
         super(Task, self).save(*args, **kwargs)
 
