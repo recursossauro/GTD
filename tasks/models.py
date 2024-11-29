@@ -7,7 +7,13 @@ from django.conf import settings
 defautlSchedule = now() + timedelta(days=7)
 
 class Task(models.Model):
-    # A Task could be a task, a stuff or a project.
+    # A Task could be a task, a stuff, a project, a reference.
+    TYPE_CHOICES = {
+        'ST': 'Stuff',
+        'TK': 'Task',
+        'PJ': 'Project',
+        'RF': 'Reference',
+    }
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='User', on_delete=models.CASCADE)
 
@@ -25,7 +31,7 @@ class Task(models.Model):
     class Meta:
         verbose_name = 'Task'
         verbose_name_plural = 'Tasks'
-        ordering = ['dt_completed','dt_scheduled']
+        ordering = ['user', 'dt_completed','dt_scheduled']
 
     def save(self, *args, **kwargs):
 
@@ -81,7 +87,7 @@ class TaskControl(models.Model):
     class Meta:
         verbose_name = 'Task_Control'
         verbose_name_plural = 'Task_Controls'
-        ordering = ['task','-dt']
+        ordering = ['user', 'task','-dt']
 
     def __str__(self):
         return str(self.dt) + ' - ' + self.description[:100]
