@@ -97,7 +97,7 @@ def conclude_or_not_task(request, pk):
     task = get_object_or_404(Task, pk=pk)
 
     # Test if user has permission
-    if request.user != task.user:
+    if request.user == task.user:
         if ('checkbox' in request.POST):
             if request.POST['checkbox'] == 'checked':
                 if task.dt_completed is None:
