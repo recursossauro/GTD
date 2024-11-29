@@ -82,8 +82,8 @@ def task_conclude(request, pk):
             task.dt_completed = now()
             task.save()
 
-        if request.GET.get('next') is not None:
-            return HttpResponseRedirect(request.GET.get('next'))
+    if request.GET.get('next') is not None:
+        return HttpResponseRedirect(request.GET.get('next'))
 
     return HttpResponseRedirect(reverse('tasks:task', kwargs={'pk':pk}))
 
@@ -107,7 +107,8 @@ def conclude_or_not_task(request, pk):
             if task.dt_completed:
                 task.dt_completed = None
                 task.save()
-
+    if request.GET.get('next') is not None:
+        return HttpResponseRedirect(request.GET.get('next'))
     return HttpResponseRedirect(reverse("tasks:display_tasks"))
 
 # HISTORY
