@@ -42,8 +42,8 @@ def display_tasks(request):
 
     context = {
         'tasks': {
-            'uncompleted_tasks': Task.objects.filter(dt_completed__isnull=True),
-            'completed_tasks': Task.objects.filter(dt_completed__isnull=False),
+            'uncompleted_tasks': Task.objects.filter(dt_completed__isnull=True, user=request.user),
+            'completed_tasks': Task.objects.filter(dt_completed__isnull=False, user=request.user),
         }
     }
 
@@ -52,6 +52,15 @@ def display_tasks(request):
 class TaskDetailView(LoginRequiredMixin, DetailView):
     template_name = "tasks/task.html"
     model = Task
+
+    def get_object(self, queryset=None):
+        obj = super().get_object(queryset)
+        # Check if the logged user is the Task creator.
+        if obj.user != self.request.user:
+            raise PermissionDenied("You has no permission to access this Task.")
+        return obj
+
+
 
 class TaskListView(LoginRequiredMixin, ListView):
     template_name = 'tasks/index.html'
