@@ -77,7 +77,7 @@ def task_conclude(request, pk):
 
     task = get_object_or_404(Task, pk=pk)
     # Test if user has permission
-    if request.user != task.user:
+    if request.user == task.user:
         if task.dt_completed is None:
             task.dt_completed = now()
             task.save()

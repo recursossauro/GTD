@@ -41,7 +41,10 @@
                     </li>
                 {% else %}
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="{% url 'login' %}">login</a>
+                      <a class="nav-link active" aria-current="page" href="{% url 'login' %}"><i class="bi bi-person-check"></i> Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="{% url 'signup' %}"><i class="bi bi-person-add"></i> Sign Up</a>
                     </li>
                 {% endif %}
             </ul>
