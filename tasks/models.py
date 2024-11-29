@@ -17,6 +17,7 @@ class Task(models.Model):
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='User', on_delete=models.CASCADE)
 
+    type = models.CharField('Type', max_length=2, choices=TYPE_CHOICES, default='TK')
     title = models.CharField("Title", max_length=160)
     description = models.TextField("description", blank=True, null=True)
 
