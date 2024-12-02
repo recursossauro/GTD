@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "core.apps.CoreConfig",
     "tasks.apps.TasksConfig",
     "accounts",
+    "inbox.apps.InboxConfig",
 ]
 
 MIDDLEWARE = [
