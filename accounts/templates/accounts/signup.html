@@ -9,8 +9,38 @@
 <h2>Sign up</h2>
 <form method="post">
   {% csrf_token %}
-  {{ form }}
-  <button type="submit">Sign Up</button>
+  {% for error in form.non_field_errors %}
+      <div class="alert alert-danger">
+        {{ error }}
+      </div>
+  {% endfor %}
+  <fieldset>
+    <div class="row form-group{% if form.username.errors %} has-error {% endif %}">
+      <div class="input-group">
+        <label for="id_username" class="input-group-text">User Name: </label><input type="text" name="username" id="id_username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus required class="form-control">
+        {% for error in form.username.errors %}
+              <span class="help-block">{{ error }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="row form-group{% if form.password.errors %} has-error {% endif %}">
+      <div class="input-group">
+        <label for="id_password1" class="input-group-text">Password: </label><input type="password" name="password1" id="id_password1" autocomplete="new-password" required class="form-control">
+        {% for error in form.password1.errors %}
+              <span class="help-block">{{ error }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="row form-group{% if form.password.errors %} has-error {% endif %}">
+      <div class="input-group">
+        <label for="id_password2" class="input-group-text">Password Confirmation: </label><input type="password" name="password2" id="id_password2" autocomplete="new-password" required class="form-control">
+        {% for error in form.password2.errors %}
+              <span class="help-block">{{ error }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </fieldset>
+  <button type="submit" class="btn btn-success">Sign Up</button>
 </form>
 {%endblock%}
 
