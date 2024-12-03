@@ -42,8 +42,8 @@ def display_tasks(request):
 
     context = {
         'tasks': {
-            'uncompleted_tasks': Task.objects.filter(dt_completed__isnull=True, user=request.user),
-            'completed_tasks': Task.objects.filter(dt_completed__isnull=False, user=request.user),
+            'uncompleted_tasks': Task.objects.filter(dt_completed__isnull=True, user=request.user, type='TK'),
+            'completed_tasks': Task.objects.filter(dt_completed__isnull=False, user=request.user, type='TK'),
         }
     }
 
@@ -64,7 +64,9 @@ class TaskDetailView(LoginRequiredMixin, DetailView):
 
 class TaskListView(LoginRequiredMixin, ListView):
     template_name = 'tasks/index.html'
-    model = Task
+
+    def get_queryset(self):
+        return Task.objects.filter(user=self.request.user, type='TK')
 
 @login_required
 @require_http_methods(['DELETE'])
