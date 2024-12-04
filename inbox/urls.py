@@ -1,7 +1,6 @@
 from django.urls import path
 from inbox.views import (
     StuffCreateView,
-    StuffListView,
     IndexTemplateView,
     delete_stuff,
     display_stuffs,
