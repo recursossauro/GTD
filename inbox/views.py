@@ -1,5 +1,9 @@
+from django.http import HttpResponseRedirect
+from django.views.decorators.http import require_http_methods
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
+from django.shortcuts import get_object_or_404, render
 from django.views.generic import ListView, CreateView, TemplateView
 
 from tasks.models import Task
@@ -22,12 +26,18 @@ class StuffCreateView(LoginRequiredMixin, CreateView):
 
         return super().form_valid(form)
 
+@login_required
+def display_stuffs(request):
 
-class StuffListView(LoginRequiredMixin, ListView):
-    template_name = 'inbox/stuff_list.html'
-    model = Task
+    context = {
+            'object_list': Task.objects.filter(user=request.user, type='ST'),
+    }
 
+    return render(request, 'inbox/stuff_list.html', context)
 
-    def get_queryset(self):
-
-        return Task.objects.filter(user=self.request.user, type='ST')
+@login_required
+@require_http_methods(['DELETE'])
+def delete_stuff(request, pk):
+    task = get_object_or_404(Task, pk=pk, user=request.user, type="ST")
+    task.delete()
+    return HttpResponseRedirect(reverse("inbox:stuffs"))

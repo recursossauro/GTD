@@ -60,8 +60,6 @@ class TaskDetailView(LoginRequiredMixin, DetailView):
             raise PermissionDenied("You has no permission to access this Task.")
         return obj
 
-
-
 class TaskListView(LoginRequiredMixin, ListView):
     template_name = 'tasks/index.html'
 

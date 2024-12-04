@@ -15,10 +15,11 @@
             <td><div class="btn-group end" role="group">
                 <a type="button" class="btn btn-secondary" href="{% url 'tasks:update_task' item.pk %}?next={{ request.path|urlencode }}" title="Edit Task"><i class="bi bi-pencil-square"></i></a>
                 <button type="button" class="btn btn-danger"
-                       hx-delete="{% url 'tasks:delete_task' item.pk %}"
-                       hx-confirm="Are you sure you wish to delete this task?"
+                       hx-delete="{% url 'inbox:delete_stuff' item.pk %}"
+                       hx-confirm='Are you sure you wish to delete "{{item.pk}}. {{item.title}}" stuff?'
                        hx-target="#stuffs"
-                ><i class="bi bi-trash3" title="Delete Task"></i></button>
+                       hx-swap="outerHTML"
+                ><i class="bi bi-trash3" title="Delete Stuff"></i></button>
             </div></td>
         </tr>
         </tbody>
