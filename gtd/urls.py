@@ -25,4 +25,6 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='index.html'), name='index'),
     path('tasks/', include(('tasks.urls','tasks'), namespace='tasks')),
     path('inbox/', include(('inbox.urls','inbox'), namespace='inbox')),
+    path('projects/', include(('projects.urls','projects'), namespace='projects')),
+
 ]
