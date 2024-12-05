@@ -14,6 +14,8 @@
             <!-- COMANDS -->
             <td><div class="btn-group end" role="group">
                 <a type="button" class="btn btn-secondary" href="{% url 'tasks:update_task' item.pk %}?next={{ request.path|urlencode }}" title="Edit Task"><i class="bi bi-pencil-square"></i></a>
+                <a type="button" class="btn btn-success" href="{% url 'tasks:from_inbox' item.pk%}?next={{ request.path|urlencode }}" title="Turn to a Task"><i class="bi bi-list-check"></i></a>
+                <a type="button" class="btn btn-dark" href="" title="Turn to a Project"><i class="bi bi-clipboard2"></i></a>
                 <button type="button" class="btn btn-danger"
                        hx-delete="{% url 'inbox:delete_stuff' item.pk %}"
                        hx-confirm='Are you sure you wish to delete "{{item.pk}}. {{item.title}}" stuff?'

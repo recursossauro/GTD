@@ -1,6 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
 from django.shortcuts import render, get_object_or_404
+from django.template.context_processors import request
 from django.views.decorators.http import require_http_methods
 from django.views.generic import CreateView, ListView, DetailView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -58,7 +59,12 @@ class TaskDetailView(LoginRequiredMixin, DetailView):
         # Check if the logged user is the Task creator.
         if obj.user != self.request.user:
             raise PermissionDenied("You has no permission to access this Task.")
+        # Check if the path has from_inbox and task is a stuff
+        if 'from_inbox' in self.request.path and obj.type == 'ST':
+            obj.type = 'TK'
+            obj.save()
         return obj
+
 
 class TaskListView(LoginRequiredMixin, ListView):
     template_name = 'tasks/index.html'
