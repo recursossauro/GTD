@@ -33,6 +33,9 @@
             <a type="button" class="btn btn-danger" href="{% url 'tasks:delete_task' object.pk %}"><i class="bi bi-trash3" title="Delete Task"></i></a>
         </div>
     </aside>
+    <section>
+        {% include 'tasks/create_schedule.html' %}
+    </section>
     <section
         hx-trigger="load"
         hx-target="this"

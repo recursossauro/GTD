@@ -152,4 +152,44 @@ def display_task_history(request, task_id):
 @require_http_methods(['DELETE'])
 def delete_TaskControl(request, task_id, id):
     TaskControl.objects.filter(id=id).delete()
+
+    if request.GET.get('type') == 'schedule':
+        return HttpResponseRedirect(reverse("tasks:display_task_schedule", kwargs={"task_id": task_id}))
     return HttpResponseRedirect(reverse("tasks:display_task_history", kwargs={"task_id": task_id}))
+
+
+# Task Schedule
+
+@login_required
+def display_task_schedule(request, task_id):
+
+    context = {
+        'object':Task(id=task_id, user=request.user),
+    }
+
+    return render(request, 'tasks/schedule_list.html', context)
+
+
+@login_required
+def create_task_schedule(request, task_pk):
+    # Test if exists task pk for the current user
+    task = get_object_or_404(Task, pk=task_pk, user=request.user)
+    kwargs = {
+        'task':task,
+        'user':request.user,
+        'type':type,
+        'description':request.POST.get('description')
+    }
+    if 'deadline' in request.path:
+        kwargs['type'] = 'DL'
+    else:
+        kwargs['type'] = 'SC'
+
+    if request.POST.get('dt'):
+        kwargs['dt'] = request.POST.get('dt')
+
+    TaskControl(**kwargs).save()
+
+    #return HttpResponse('Task ' + str(task) + " scheduled to " + request.POST.get('dt'))
+    #return HttpResponseRedirect(reverse("tasks:display_task_schedule", kwargs={"task_id": task_pk}))
+    return render(request=request, template_name='tasks/create_schedule.html', context={'object':task, 'schedule_create_message':'Task ' + str(task) + " scheduled to " + request.POST.get('dt')})

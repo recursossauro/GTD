@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="task_lists.html change test key to if key == 'completed_tasks'">
-      <change afterPath="$PROJECT_DIR$/Dockerfile_002" afterDir="false" />
+    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="populate db">
+      <change afterPath="$PROJECT_DIR$/tasks/templates/tasks/create_schedule.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tasks/templates/tasks/schedule_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/task_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/task_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/create_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/create_task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/history_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/history_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/templates/tasks/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/tasks/task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,11 +73,13 @@
     &quot;Python.manage.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/linus/projects/GTD/gtd&quot;
+    &quot;last_opened_file_path&quot;: &quot;/home/linus/projects/GTD/gtd/projects/templates/projects&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/projects/templates/projects" />
+      <recent name="$PROJECT_DIR$/inbox/templates/inbox" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/tasks/templates/tasks" />
     </key>
@@ -131,7 +138,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
+        <option value="bundled-python-sdk-6a3326d57233-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.24807.21" />
       </set>
     </attachedChunks>
   </component>
@@ -352,10 +359,199 @@
       <option name="project" value="LOCAL" />
       <updated>1732327959989</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="task_list.html delete garbage code; Correct fail in Dockerfile.">
+      <option name="closed" value="true" />
+      <created>1732799206389</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1732799206389</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Add clipboard icon to Projects menu in core.html">
+      <option name="closed" value="true" />
+      <created>1732802450753</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1732802450753</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Add person-walking icon to log out menu in core.html;&#10;add user field to models Task and TaskControl;&#10;insert Task and TaskControl with user = request.user;&#10;Test if user == request.user to delete or update Task or TaskControl;">
+      <option name="closed" value="true" />
+      <created>1732846261508</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1732846261508</updated>
+    </task>
+    <task id="LOCAL-00030" summary="TaskDetailView reaise exception if the user is not the same as the Task.user.">
+      <option name="closed" value="true" />
+      <created>1732847066246</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1732847066246</updated>
+    </task>
+    <task id="LOCAL-00031" summary="models changes">
+      <option name="closed" value="true" />
+      <created>1732847150463</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1732847150463</updated>
+    </task>
+    <task id="LOCAL-00032" summary="tasks.models add field type to Task with the choices: Stuff, Task, Project, Reference.">
+      <option name="closed" value="true" />
+      <created>1732883936281</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1732883936281</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Created Sign Up functionality.">
+      <option name="closed" value="true" />
+      <created>1732890576074</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1732890576074</updated>
+    </task>
+    <task id="LOCAL-00034" summary="error - tasks.views.conclude_or_not_task(request, pk) was not working, now it work.">
+      <option name="closed" value="true" />
+      <created>1732893392191</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1732893392191</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Changed core.html: &#10;&quot;login&quot; menu item to &quot;Login&quot;;&#10;Add menu item &quot;Sign Up&quot;;&#10;&#10;Task.views.task_conclude corrected the function">
+      <option name="closed" value="true" />
+      <created>1732895870021</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1732895870021</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Implement returned from completed to uncompleted button on Task.html and TaskDetailView and  conclude_or_not_task.">
+      <option name="closed" value="true" />
+      <created>1732897031537</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1732897031537</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Added person icon to user name on core.hml menu.">
+      <option name="closed" value="true" />
+      <created>1733020330436</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1733020330437</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Data atualization">
+      <option name="closed" value="true" />
+      <created>1733020404727</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1733020404727</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Set screen 1 to the site default.">
+      <option name="closed" value="true" />
+      <created>1733102039539</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1733102039539</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Put subtitle on the only icons buttons of task_list.html">
+      <option name="closed" value="true" />
+      <created>1733103070516</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1733103070516</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Added menu Inbox on core.html;&#10;added inbox app;">
+      <option name="closed" value="true" />
+      <created>1733103218453</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1733103218453</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Reforced on tasks app the iteration only with Task.type Task.&#10;Create index inbox who show all stuffs and create new stuffs.">
+      <option name="closed" value="true" />
+      <created>1733245351496</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1733245351496</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Delete inbox/stuff&#10;tasks.view: Better dispose the casses and functions.">
+      <option name="closed" value="true" />
+      <created>1733275873805</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1733275873805</updated>
+    </task>
+    <task id="LOCAL-00044" summary="error - delete class StuffDeleteView from inbox.urls imports.">
+      <option name="closed" value="true" />
+      <created>1733313476204</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1733313476204</updated>
+    </task>
+    <task id="LOCAL-00045" summary="core.html, implemented active menu control.">
+      <option name="closed" value="true" />
+      <created>1733362508440</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1733362508440</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Create projects app">
+      <option name="closed" value="true" />
+      <created>1733363602783</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1733363602783</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Populate db">
+      <option name="closed" value="true" />
+      <created>1733363877592</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1733363877592</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Create buttons turn to Task and turn to Project on stuff_list.html;&#10;Implements turn to Task.">
+      <option name="closed" value="true" />
+      <created>1733365998266</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1733365998267</updated>
+    </task>
+    <task id="LOCAL-00049" summary="populate db">
+      <option name="closed" value="true" />
+      <created>1733366026769</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1733366026769</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="8cbed965-d4e7-4b96-b54e-6506d05186dc" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -384,6 +580,11 @@
     </option>
     <option name="TAB_STATES">
       <map>
+        <entry key="8cbed965-d4e7-4b96-b54e-6506d05186dc">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -417,30 +618,31 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create, list and delete simple tasks." />
-    <MESSAGE value="Created description field on models.Task; Create a display task and create model TaskHistory." />
-    <MESSAGE value="Create README.md" />
-    <MESSAGE value="Corrected in tasks.views conclude_or_not_task(request, pk) on line 73, url string bad formation." />
-    <MESSAGE value="Implement button to logout: include logout path on gtd.urls.py; Change link logoff to botton Log Out in core.html;" />
-    <MESSAGE value="A TaskControl is created for a new task saved by Task.save() method." />
-    <MESSAGE value="On class TaskControl added TYPE_CHOICES and CharField type." />
-    <MESSAGE value="create_task.html: changed placeholder=&quot;Insert a task and press &lt;ENTER&gt;&quot; to &quot;Write a task and press &lt;ENTER&gt;&quot;" />
-    <MESSAGE value="Created history_list.html, changed TYPE_CHOICES 'HS':'Historic' to 'HS':'History'" />
-    <MESSAGE value="DB changes" />
-    <MESSAGE value="conclude_or_not_task deleted result variable.&#10;Create History implementation:&#10;  tasks.views added def create_history(request, task_id)&#10;  tasks.urls: added # TASK HISTORY&#10;    path('task_history/&lt;int:task_id&gt;/new/', create_history, name='new_task_history')," />
-    <MESSAGE value="Changed a little the code  for more readabilty and simplicity models.Task.save()" />
-    <MESSAGE value="Implements insert history when task is completed on tasks.models.Task.save()" />
-    <MESSAGE value="Corrected error to save History with date or time null on tasks.views.create_history." />
-    <MESSAGE value="Changed task = get_object_or_404(Task, id=task_id) to task = Task(id=task_id) on tasks.views.create_history." />
-    <MESSAGE value="settings.pu&#10;Changed TIME_ZONE to 'America/Sao_Paulo';&#10;Added USE_L10N = True;" />
-    <MESSAGE value="Implemented two lists of tasks: uncompleted and completed.&#10;Changed delete_task to redirect to tasks:display_tasks after delete." />
-    <MESSAGE value="created requirements.txt" />
-    <MESSAGE value="created an Empty Dockerfile" />
-    <MESSAGE value="Add a col size on tag &lt;textarea&gt; to duplicate the vertical size of field description in tasks/update_task.html" />
-    <MESSAGE value="Implemented delete task histrory." />
-    <MESSAGE value="Add icon home &quot;&lt;i class=&quot;bi bi-house&quot;&gt;&lt;/i&gt;&quot; on home menu in core.html." />
     <MESSAGE value="Add icon List checked on Task menu in core.html and changed a little the organizations from tasks.index.hml nav bar moving the task and project links to core.html end putting super instead." />
     <MESSAGE value="task_lists.html change test key to if key == 'completed_tasks'" />
-    <option name="LAST_COMMIT_MESSAGE" value="task_lists.html change test key to if key == 'completed_tasks'" />
+    <MESSAGE value="task_list.html delete garbage code; Correct fail in Dockerfile." />
+    <MESSAGE value="Add clipboard icon to Projects menu in core.html" />
+    <MESSAGE value="Add person-walking icon to log out menu in core.html;&#10;add user field to models Task and TaskControl;&#10;insert Task and TaskControl with user = request.user;&#10;Test if user == request.user to delete or update Task or TaskControl;" />
+    <MESSAGE value="TaskDetailView reaise exception if the user is not the same as the Task.user." />
+    <MESSAGE value="models changes" />
+    <MESSAGE value="tasks.models add field type to Task with the choices: Stuff, Task, Project, Reference." />
+    <MESSAGE value="Created Sign Up functionality." />
+    <MESSAGE value="error - tasks.views.conclude_or_not_task(request, pk) was not working, now it work." />
+    <MESSAGE value="Changed core.html: &#10;&quot;login&quot; menu item to &quot;Login&quot;;&#10;Add menu item &quot;Sign Up&quot;;&#10;&#10;Task.views.task_conclude corrected the function" />
+    <MESSAGE value="Implement returned from completed to uncompleted button on Task.html and TaskDetailView and  conclude_or_not_task." />
+    <MESSAGE value="Added person icon to user name on core.hml menu." />
+    <MESSAGE value="Data atualization" />
+    <MESSAGE value="Set screen 1 to the site default." />
+    <MESSAGE value="Put subtitle on the only icons buttons of task_list.html" />
+    <MESSAGE value="Added menu Inbox on core.html;&#10;added inbox app;" />
+    <MESSAGE value="Reforced on tasks app the iteration only with Task.type Task.&#10;Create index inbox who show all stuffs and create new stuffs." />
+    <MESSAGE value="Delete inbox/stuff&#10;tasks.view: Better dispose the casses and functions." />
+    <MESSAGE value="error - delete class StuffDeleteView from inbox.urls imports." />
+    <MESSAGE value="core.html, implemented active menu control." />
+    <MESSAGE value="Create projects app" />
+    <MESSAGE value="Populate db" />
+    <MESSAGE value="Create buttons turn to Task and turn to Project on stuff_list.html;&#10;Implements turn to Task." />
+    <MESSAGE value="populate db" />
+    <option name="LAST_COMMIT_MESSAGE" value="populate db" />
   </component>
 </project>

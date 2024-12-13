@@ -69,6 +69,9 @@ class Task(models.Model):
     def getHistory(self):
         return self.taskcontrol_set.filter(type='HS').order_by('-dt')
 
+    def getSchedules(self):
+        return self.taskcontrol_set.filter(type='SC').order_by('-dt')
+
     def __str__(self):
         return self.title
 
@@ -76,7 +79,8 @@ class Task(models.Model):
 class TaskControl(models.Model):
     TYPE_CHOICES = {
         'HS':'History',
-        'SC':'Schedule',
+        'SC':'Schedule', # Schedule to doing
+        'DL': 'Dead Line', # Date to finish
     }
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='User', on_delete=models.CASCADE, blank=True,

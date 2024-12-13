@@ -11,6 +11,8 @@ from tasks.views import (
     create_history,
     delete_TaskControl,
     display_task_history,
+    create_task_schedule,
+    display_task_schedule,
 )
 
 
@@ -29,4 +31,8 @@ urlpatterns = [
     path('task_history/<int:task_id>/new/', create_history, name='new_task_history'),
     path('display_task_history/<int:task_id>/', display_task_history, name='display_task_history'),
     path('task_control/<int:task_id>/<int:id>/delete/', delete_TaskControl, name='delete_task_control'),
+# TASK SCHEDULE
+    path('task_schedule/<int:task_pk>/new/', create_task_schedule, name='new_task_schedule'),
+    path('task_schedule/<int:task_pk>/new/deadline', create_task_schedule, name='new_deadline'),
+    path('display_task_shcedule/<int:task_id>/', display_task_schedule, name='display_task_schedule'),
 ]
