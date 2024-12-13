@@ -3,6 +3,7 @@ from django.shortcuts import get_object_or_404
 from django.utils.timezone import now
 from datetime import timedelta
 from django.conf import settings
+from django.db.models import Q
 
 defautlSchedule = now() + timedelta(days=7)
 
@@ -71,6 +72,14 @@ class Task(models.Model):
 
     def getSchedules(self):
         return self.taskcontrol_set.filter(type='SC').order_by('-dt')
+
+    @classmethod
+    def getTodayTasks(cls):
+        # filter all tasks not completed type task and dt_scheduled is today or has schedule for today.
+        return cls.objects.filter(
+            Q(taskcontrol__type='SC') & Q(taskcontrol__dt__date=now()) | Q(dt_scheduled__date=now()),
+            type='TK',
+            dt_completed__isnull=True).distinct()
 
     def __str__(self):
         return self.title
