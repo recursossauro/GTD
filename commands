@@ -1,0 +1,13 @@
+Common Commands
+
+Docker Commands
+--------------------------
+docker build -t gtd:0.8 .
+docker ps
+docker ps -a
+docker rm <container id>
+docker rmi <image id> -f
+docker start <container id>
+docker run -p 8001:8000 gtd:0.8
+docker run -it gtd:0.8 bash
+docker exec -iti 5a4032a656f0 bash
