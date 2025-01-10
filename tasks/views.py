@@ -132,7 +132,7 @@ def create_history(request, task_id):
         if 'time' in request.POST and request.POST.get('time'):
             date = date + ' ' + request.POST.get('time')
 
-        TaskControl(ser=request.user, task=task, type='HS', dt=date, description=request.POST.get('description')).save()
+        TaskControl(user=request.user, task=task, type='HS', dt=date, description=request.POST.get('description')).save()
 
 
     return HttpResponseRedirect(reverse("tasks:task", kwargs={'pk': task_id}))
