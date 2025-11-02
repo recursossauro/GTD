@@ -97,7 +97,7 @@ class TaskControl(models.Model):
 
     task         = models.ForeignKey(Task, on_delete=models.CASCADE)
     type         = models.CharField('Type', max_length=2, choices=TYPE_CHOICES, default='HS')
-    dt           = models.DateTimeField('Date', default=now())
+    dt           = models.DateTimeField('Date', default=now(), blank=True, null=True)
     dt_scheduled = models.DateTimeField('Date', default=now(), blank=True, null=True)
     description  = models.TextField("description")
 

@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="Error correction: TaskControl() got unexpected keyword arguments: 'ser', task.view, line 135">
-      <change afterPath="$PROJECT_DIR$/Dockerfile_004" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/templates/projects/create_project.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/templates/projects/project_list.html" afterDir="false" />
+    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="create TaskControl.getSchedules(self, FromToday=0) on tasks/models.py to get all schedules from a day from or at now.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands" beforeDir="false" afterPath="$PROJECT_DIR$/commands" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gtd/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/gtd/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/templates/projects/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/templates/projects/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,14 +144,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1729915375442</updated>
-    </task>
-    <task id="LOCAL-00009" summary="On class TaskControl added TYPE_CHOICES and CharField type.">
-      <option name="closed" value="true" />
-      <created>1731618638179</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1731618638179</updated>
     </task>
     <task id="LOCAL-00010" summary="create_task.html: changed placeholder=&quot;Insert a task and press &lt;ENTER&gt;&quot; to &quot;Write a task and press &lt;ENTER&gt;&quot;">
       <option name="closed" value="true" />
@@ -546,7 +529,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736520610070</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="create TaskControl.getSchedules(self, FromToday=0) on tasks/models.py to get all schedules from a day from or at now.">
+      <option name="closed" value="true" />
+      <created>1762098807300</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1762098807311</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -621,7 +612,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="tasks.models add field type to Task with the choices: Stuff, Task, Project, Reference." />
     <MESSAGE value="Created Sign Up functionality." />
     <MESSAGE value="error - tasks.views.conclude_or_not_task(request, pk) was not working, now it work." />
     <MESSAGE value="Changed core.html: &#10;&quot;login&quot; menu item to &quot;Login&quot;;&#10;Add menu item &quot;Sign Up&quot;;&#10;&#10;Task.views.task_conclude corrected the function" />
@@ -646,6 +636,7 @@
     <MESSAGE value="data bkp" />
     <MESSAGE value="Docker file to install git" />
     <MESSAGE value="Error correction: TaskControl() got unexpected keyword arguments: 'ser', task.view, line 135" />
-    <option name="LAST_COMMIT_MESSAGE" value="Error correction: TaskControl() got unexpected keyword arguments: 'ser', task.view, line 135" />
+    <MESSAGE value="create TaskControl.getSchedules(self, FromToday=0) on tasks/models.py to get all schedules from a day from or at now." />
+    <option name="LAST_COMMIT_MESSAGE" value="create TaskControl.getSchedules(self, FromToday=0) on tasks/models.py to get all schedules from a day from or at now." />
   </component>
 </project>
