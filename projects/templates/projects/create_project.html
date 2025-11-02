@@ -1,0 +1,32 @@
+<form class="" method="post"
+      hx-target="this"
+      hx-swap="outerHTML"
+      hx-post="{% url 'project:create_project' %}"
+
+>
+    {% csrf_token %}
+    {% for error in form.non_field_errors %}
+      <div class="alert alert-danger">
+        {{ error }}
+      </div>
+    {% endfor %}
+    <fieldset>
+      <div class="row form-group{% if form.title.errors %} has-error {% endif %}">
+        <div class="input-group">
+            <label for="id_title" class="input-group-text">New Project</label><input type="text" class="form-control" name="title" id="id_title" placeholder="Write a project and press <ENTER>">
+            {% for error in form.title.errors %}
+              <span class="help-block">{{ error }}</span>
+            {% endfor %}
+        </div>
+      </div>
+    </fieldset>
+    <header><h1>Project List</h1></header>
+    <section id="project_list"
+      hx-trigger="load after-post"
+      hx-target="this"
+      hx-swap="innerHTML"
+      hx-get="{% url 'inbox:projects' %}"
+    >
+        {% include "inbox/project_list.html" %}
+    </section>
+</form>

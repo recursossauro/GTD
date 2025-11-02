@@ -2,7 +2,7 @@ Common Commands
 
 Docker Commands
 --------------------------
-docker build -t gtd:0.8 .
+docker build -t gtd:0.9 .
 docker ps
 docker ps -a
 docker rm <container id>
@@ -11,3 +11,12 @@ docker start <container id>
 docker run -p 8001:8000 gtd:0.8
 docker run -it gtd:0.8 bash
 docker exec -iti 5a4032a656f0 bash
+docker run --name portal -v ~/projects/Portal/html:/usr/share/nginx/html:ro -d -p 8080:80 nginx
+docker run -it --name gtd_desenv -v ~/projects/GTD:/usr/src/app:ro -d -p 8002:8000 gtd:0.10 /bin/bash -c "while true; do sleep 1; done"
+
+
+
+Git Commands
+-------------------------------------
+git push -u origin main
+git push -u origin release_001

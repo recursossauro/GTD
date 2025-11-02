@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="date bkp">
+    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="Error correction: TaskControl() got unexpected keyword arguments: 'ser', task.view, line 135">
+      <change afterPath="$PROJECT_DIR$/Dockerfile_004" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/templates/projects/create_project.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/templates/projects/project_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/core.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands" beforeDir="false" afterPath="$PROJECT_DIR$/commands" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gtd/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/gtd/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/templates/projects/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/templates/projects/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +60,7 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2nxWnb5bjsjveGm6H6xzAp03C2R" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -65,15 +73,17 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;Python.manage.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/linus/projects/GTD/gtd/projects/templates/projects&quot;
+    &quot;last_opened_file_path&quot;: &quot;/home/linus/projects/Address-Service/Address-Service&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/projects/templates/projects" />
-      <recent name="$PROJECT_DIR$/inbox/templates/inbox" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/inbox/templates/inbox" />
       <recent name="$PROJECT_DIR$/tasks/templates/tasks" />
     </key>
   </component>
@@ -131,7 +141,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-6a3326d57233-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.24807.21" />
+        <option value="bundled-python-sdk-f69e5c277ee4-cbfc7b97e6b2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-252.27397.106" />
       </set>
     </attachedChunks>
   </component>
@@ -143,46 +153,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1729915375442</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Create README.md">
-      <option name="closed" value="true" />
-      <created>1730941093452</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1730941093452</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Corrected in tasks.views conclude_or_not_task(request, pk) on line 73, url string bad formation.">
-      <option name="closed" value="true" />
-      <created>1731117970501</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1731117970501</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Implement button to logout: include logout path on gtd.urls.py; Change link logoff to botton Log Out in core.html;">
-      <option name="closed" value="true" />
-      <created>1731500046840</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1731500046840</updated>
-    </task>
-    <task id="LOCAL-00007" summary="A TaskControl is created for a new task saved by Task.save() method.">
-      <option name="closed" value="true" />
-      <created>1731617368605</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1731617368605</updated>
-    </task>
-    <task id="LOCAL-00008" summary="A TaskControl is created for a new task saved by Task.save() method.">
-      <option name="closed" value="true" />
-      <created>1731617403285</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1731617403285</updated>
     </task>
     <task id="LOCAL-00009" summary="On class TaskControl added TYPE_CHOICES and CharField type.">
       <option name="closed" value="true" />
@@ -536,7 +506,47 @@
       <option name="project" value="LOCAL" />
       <updated>1734057115956</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Add a colapse button to turn the navbar into a responsive menu.">
+      <option name="closed" value="true" />
+      <created>1734195064707</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1734195064717</updated>
+    </task>
+    <task id="LOCAL-00054" summary="data bkp">
+      <option name="closed" value="true" />
+      <created>1734195105289</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1734195105289</updated>
+    </task>
+    <task id="LOCAL-00055" summary="data bkp">
+      <option name="closed" value="true" />
+      <created>1734195143329</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1734195143329</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Docker file to install git">
+      <option name="closed" value="true" />
+      <created>1734217396874</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1734217396874</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Error correction: TaskControl() got unexpected keyword arguments: 'ser', task.view, line 135">
+      <option name="closed" value="true" />
+      <created>1736520610070</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1736520610070</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -611,10 +621,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add clipboard icon to Projects menu in core.html" />
-    <MESSAGE value="Add person-walking icon to log out menu in core.html;&#10;add user field to models Task and TaskControl;&#10;insert Task and TaskControl with user = request.user;&#10;Test if user == request.user to delete or update Task or TaskControl;" />
-    <MESSAGE value="TaskDetailView reaise exception if the user is not the same as the Task.user." />
-    <MESSAGE value="models changes" />
     <MESSAGE value="tasks.models add field type to Task with the choices: Stuff, Task, Project, Reference." />
     <MESSAGE value="Created Sign Up functionality." />
     <MESSAGE value="error - tasks.views.conclude_or_not_task(request, pk) was not working, now it work." />
@@ -636,6 +642,10 @@
     <MESSAGE value="Task schedule add and list;&#10;visual upgrades" />
     <MESSAGE value="add a getTodayTasks model Task class method" />
     <MESSAGE value="date bkp" />
-    <option name="LAST_COMMIT_MESSAGE" value="date bkp" />
+    <MESSAGE value="Add a colapse button to turn the navbar into a responsive menu." />
+    <MESSAGE value="data bkp" />
+    <MESSAGE value="Docker file to install git" />
+    <MESSAGE value="Error correction: TaskControl() got unexpected keyword arguments: 'ser', task.view, line 135" />
+    <option name="LAST_COMMIT_MESSAGE" value="Error correction: TaskControl() got unexpected keyword arguments: 'ser', task.view, line 135" />
   </component>
 </project>

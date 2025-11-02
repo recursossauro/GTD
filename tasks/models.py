@@ -95,10 +95,11 @@ class TaskControl(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='User', on_delete=models.CASCADE, blank=True,
                              null=True)
 
-    task        = models.ForeignKey(Task, on_delete=models.CASCADE)
-    type        = models.CharField('Type', max_length=2, choices=TYPE_CHOICES, default='HS')
-    dt          = models.DateTimeField('Date', default=now())
-    description = models.TextField("description")
+    task         = models.ForeignKey(Task, on_delete=models.CASCADE)
+    type         = models.CharField('Type', max_length=2, choices=TYPE_CHOICES, default='HS')
+    dt           = models.DateTimeField('Date', default=now())
+    dt_scheduled = models.DateTimeField('Date', default=now(), blank=True, null=True)
+    description  = models.TextField("description")
 
     # Fields to backup control
     created = models.DateTimeField('Created', auto_now_add=True, null=True)
@@ -111,4 +112,11 @@ class TaskControl(models.Model):
 
     def __str__(self):
         return str(self.dt) + ' - ' + self.description[:100]
+
+    def getSchedules(self, FromToday=0):
+        day = now() + timedelta(days=FromToday)
+        schedules = self.objects.filter(type='SC', dt_scheduled__day = day.day)
+
+        return schedules
+
 
