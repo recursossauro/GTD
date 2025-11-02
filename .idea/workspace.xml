@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="create TaskControl.getSchedules(self, FromToday=0) on tasks/models.py to get all schedules from a day from or at now.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d069fcc3-8b53-4c41-bfea-efd3d5baa7a3" name="Changes" comment="Changed TaskControl.dt to get null values, for the case the control was a Schedule or a Dead Line.">
       <change beforePath="$PROJECT_DIR$/tasks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,14 +143,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1729915375442</updated>
-    </task>
-    <task id="LOCAL-00010" summary="create_task.html: changed placeholder=&quot;Insert a task and press &lt;ENTER&gt;&quot; to &quot;Write a task and press &lt;ENTER&gt;&quot;">
-      <option name="closed" value="true" />
-      <created>1731623340275</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1731623340275</updated>
     </task>
     <task id="LOCAL-00011" summary="Created history_list.html, changed TYPE_CHOICES 'HS':'Historic' to 'HS':'History'">
       <option name="closed" value="true" />
@@ -537,7 +528,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762098807311</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Changed TaskControl.dt to get null values, for the case the control was a Schedule or a Dead Line.">
+      <option name="closed" value="true" />
+      <created>1762099113251</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1762099113251</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -612,7 +611,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created Sign Up functionality." />
     <MESSAGE value="error - tasks.views.conclude_or_not_task(request, pk) was not working, now it work." />
     <MESSAGE value="Changed core.html: &#10;&quot;login&quot; menu item to &quot;Login&quot;;&#10;Add menu item &quot;Sign Up&quot;;&#10;&#10;Task.views.task_conclude corrected the function" />
     <MESSAGE value="Implement returned from completed to uncompleted button on Task.html and TaskDetailView and  conclude_or_not_task." />
@@ -637,6 +635,7 @@
     <MESSAGE value="Docker file to install git" />
     <MESSAGE value="Error correction: TaskControl() got unexpected keyword arguments: 'ser', task.view, line 135" />
     <MESSAGE value="create TaskControl.getSchedules(self, FromToday=0) on tasks/models.py to get all schedules from a day from or at now." />
-    <option name="LAST_COMMIT_MESSAGE" value="create TaskControl.getSchedules(self, FromToday=0) on tasks/models.py to get all schedules from a day from or at now." />
+    <MESSAGE value="Changed TaskControl.dt to get null values, for the case the control was a Schedule or a Dead Line." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed TaskControl.dt to get null values, for the case the control was a Schedule or a Dead Line." />
   </component>
 </project>

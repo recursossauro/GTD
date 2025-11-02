@@ -113,6 +113,10 @@ class TaskControl(models.Model):
     def __str__(self):
         return str(self.dt) + ' - ' + self.description[:100]
 
+    def createSchedule(self, taskControl):
+        taskControl.dt = None
+        taskControl.save()
+
     def getSchedules(self, FromToday=0):
         day = now() + timedelta(days=FromToday)
         schedules = self.objects.filter(type='SC', dt_scheduled__day = day.day)
